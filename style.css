@@ -1,0 +1,244 @@
+
+/* Initial state: Images positioned off-screen */
+.imgs-container img {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Animated state: Images move into view */
+.imgs-container img.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 40px; 
+  background: #f4f4f4;
+}
+
+header {
+  background: #000000;
+  color: white;
+  padding: 1px 0; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: rgba(0, 0, 0, 0.7); 
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0; 
+}
+
+a[href^="tel"] {
+  color: #000000; 
+  text-decoration: none;
+  margin-top: 5px;
+  
+}
+
+.call-btn {
+  margin-top: 3px;
+  background-color: #f3eeee;
+  color: rgb(35, 76, 164);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.call-btn:hover{
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 0px rgb(157, 147, 147);
+  margin: 10px 0;
+  padding-bottom: 5px; 
+  border-bottom: 2px solid #b42222; 
+  display: inline-block; /
+}
+
+/* For smaller screens */
+@media screen and (max-width: 600px) {
+  #services {
+      background-size: contain; 
+  }
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.service-item {
+  background: #7c2525;
+  padding: 10px;
+  margin: 15px auto;
+  width: 80%;
+  border-radius: 10px;
+  color: white;
+}
+
+#ourWork {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  .imgs {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+  }
+}
+
+.vid1, .vid2{
+  margin: 4px;
+}
+
+.img1 {
+  /*width: 30%;*/
+  width: 500px;
+}
+.img2 {
+  /*width: 30%;*/
+  width: 500px;
+}
+.img3 {
+  /*width: 30%;*/
+  width: 500px;
+}
+.img4, .img5, .img6, .img7,  .img9, .img10, .img11{
+ /* width: 30%;*/
+ width: 500px;
+  
+}
+
+.img8 {
+  width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11 {
+width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .img8{
+    width: 65%;
+  }
+}
+
+#contact {
+  background-color: rgb(249, 243, 243);
+}
+
+.call-btnn {
+  background-color: #a92020;
+  color: rgb(250, 250, 250);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.call-btnn:hover{
+  text-decoration: underline;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 390px) and (max-width: 414px) {
+  header {
+    /* other styles */
+   padding: 18px;
+  }
+.ur {
+  margin: 5px;
+}
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex; /* This will line up the items horizontally */
+    justify-content: space-around; /* This will distribute space evenly */
+  }
+
+  nav ul li {
+    margin: 0; /* Adjust or remove margin as necessary */
+  }
+
+  nav ul li a {
+    font-size: 0.8rem; /* Adjust font size to fit the screen */
+    padding: 5px; /* Adjust padding as necessary */
+  }
+
+  .title {
+    font-size: 1.4rem; /* Adjust title font size */
+    /* other styles */
+  }
+
+  /* You may want to adjust the padding and margins of other elements too */
+}
+
+@media only screen and (max-width: 375px) {
+  header {
+    padding: 3px 0; /* Adjust padding to ensure the header fits */
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+  }
+
+  nav ul li {
+    margin: 0 5px; /* Adjust margin to fit the screen size */
+  }
+
+  nav ul li a {
+    font-size: 0.8rem; /* Reduce font size to prevent wrapping */
+    padding: 8px 5px; /* Adjust padding to optimize tap targets */
+  }
+
+  .title {
+    font-size: 1.4rem; /* Reduce the title font size if necessary */
+    margin: 5px 0; /* Adjust margin to fit the screen size */
+  }}
